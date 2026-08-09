@@ -1,0 +1,4 @@
+interface:
+  display_name: "Signalbox Preflight"
+  short_description: "Inspect scope, ownership, dependencies, and remote readiness"
+  default_prompt: "Run Signalbox preflight checks on this repository and explain the next safe action."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Signalbox Verify"
+  short_description: "Verify completion claims against captured execution evidence"
+  default_prompt: "Verify this result and its evidence with Signalbox."

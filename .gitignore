@@ -1,0 +1,8 @@
+.signalbox/
+.kaptaind/
+.fract/
+.traci/
+.toon
+benchmark_results.json
+BENCHMARK_REPORT.md
+

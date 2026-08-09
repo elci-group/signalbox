@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+BATS_ROOT=${BATS_ROOT:-${HOME}/.local}
+bats_readlinkf() { readlink -f "$1"; }
+export BATS_ROOT
+export -f bats_readlinkf
+exec "$BATS_ROOT/libexec/bats-core/bats" "$@"

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+resolve_home() {
+  local source=${BASH_SOURCE[0]}
+  while [[ -L $source ]]; do
+    local dir
+    dir=$(cd -P "$(dirname "$source")" && pwd)
+    source=$(readlink "$source")
+    [[ $source != /* ]] && source=$dir/$source
+  done
+  cd -P "$(dirname "$source")/.." && pwd
+}
+
+SIGNALBOX_HOME=${SIGNALBOX_HOME:-$(resolve_home)}
+# shellcheck source=lib/signalbox.sh
+source "$SIGNALBOX_HOME/lib/signalbox.sh"
+signalbox_main "$@"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Signalbox Benchmark"
+  short_description: "Benchmark deterministic orchestration safety and overhead"
+  default_prompt: "Benchmark Signalbox and report safety, determinism, and latency regressions."

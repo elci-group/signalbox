@@ -1,0 +1,4 @@
+interface:
+  display_name: "Signalbox Audit"
+  short_description: "Run the deterministic full analyzer and guardrail suite"
+  default_prompt: "Audit this project with the complete Signalbox suite and summarize actionable findings."

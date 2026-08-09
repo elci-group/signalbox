@@ -1,0 +1,10 @@
+# Common
+.git
+.kaptaind
+.signalbox
+.fract
+.traci
+.toon
+.DS_Store
+*.swp
+*.swo

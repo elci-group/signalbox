@@ -1,0 +1,4 @@
+interface:
+  display_name: "Signalbox Publish"
+  short_description: "Plan and apply digest-confirmed repository publication"
+  default_prompt: "Create a Signalbox publication plan for this repository without applying it."

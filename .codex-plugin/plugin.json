@@ -1,0 +1,18 @@
+{
+  "name": "signalbox",
+  "version": "0.1.0",
+  "description": "Deterministic analysis and publication interlocking for agent workflows",
+  "author": {
+    "name": "ELCI Group"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Signalbox",
+    "shortDescription": "Analyze, verify, and safely publish agent work.",
+    "longDescription": "Signalbox supplies deterministic preflight, full-suite audit, evidence verification, benchmark, and digest-confirmed publication skills.",
+    "developerName": "ELCI Group",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Run Signalbox preflight and recommend the next safe action."
+  }
+}

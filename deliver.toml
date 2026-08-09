@@ -1,0 +1,46 @@
+[[file]]
+path = "bin/signalbox"
+required = true
+forbid_regex = ["TODO", "FIXME", "eval "]
+
+[[file]]
+path = "lib/signalbox.sh"
+required = true
+forbid_regex = ["TODO", "FIXME", "eval "]
+
+[[file]]
+path = ".codex-plugin/plugin.json"
+required = true
+
+[[file]]
+path = "README.md"
+required = true
+require_regex = ["digest", "doctor", "benchmark", "not_applicable"]
+
+[[command]]
+name = "bash syntax"
+cmd = ["bash", "-n", "bin/signalbox", "lib/signalbox.sh", "install.sh", "scripts/bats-relocatable", "tests/test.sh", "bench/run.sh"]
+expect_exit = 0
+timeout_secs = 30
+
+[[command]]
+name = "shell tests"
+cmd = ["bash", "tests/test.sh"]
+expect_exit = 0
+timeout_secs = 120
+
+[[command]]
+name = "shellcheck"
+cmd = ["shellcheck", "-x", "bin/signalbox", "lib/signalbox.sh", "install.sh", "scripts/bats-relocatable", "tests/test.sh", "bench/run.sh"]
+expect_exit = 0
+timeout_secs = 60
+
+[[command]]
+name = "bats"
+cmd = ["bats", "tests/signalbox.bats"]
+expect_exit = 0
+timeout_secs = 120
+
+[git]
+no_uncommitted_changes = false
+no_untracked_files = false
