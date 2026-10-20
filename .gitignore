@@ -6,3 +6,9 @@
 benchmark_results.json
 BENCHMARK_REPORT.md
 
+.azusa/
+.lwoodz/
+.uni/
+.orb
+*.log
+.env
